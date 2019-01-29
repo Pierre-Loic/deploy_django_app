@@ -1,0 +1,12 @@
+{% extends "login/base.html" %}
+{% block title %} - Login{% endblock %}
+{% block content %}
+    <h1 class="text-center">Bienvenue sur la plateforme!</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="text-center form-group">
+            {{ form }}
+        </fieldset>
+        <button class="btn btn-primary btn-block" type="submit">Connexion</button>
+    </form>
+{% endblock content %}
